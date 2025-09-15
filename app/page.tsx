@@ -87,10 +87,10 @@ export default function Home() {
     }
   };
 
-  const handleReset = () => {
-    setReport("");
-    setError(null);
-  };
+  // const handleReset = () => {
+  //   setReport("");
+  //   setError(null);
+  // };
 
   const handleUpdate = (updatedReport: string) => {
     setReport(updatedReport);
