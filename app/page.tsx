@@ -9,7 +9,15 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (formData: any) => {
+  interface FormData {
+    title: string;
+    dateTime: string;
+    location: string;
+    persons: string;
+    description: string;
+  }
+
+  const handleSubmit = async (formData: FormData) => {
     setIsLoading(true);
     setReport("");
     setError(null);
@@ -106,7 +114,7 @@ export default function Home() {
         <div className="max-w-lg w-full">
           <ReportDisplay
             report={report}
-            onReset={handleReset}
+          //  onReset={handleReset}
             onUpdate={handleUpdate}
           />
           {isLoading && (

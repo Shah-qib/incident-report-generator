@@ -5,13 +5,13 @@ import jsPDF from "jspdf";
 
 interface ReportDisplayProps {
   report: string;
-  onReset: () => void;
+  //onReset: () => void;
   onUpdate?: (updatedReport: string) => void;
 }
 
 export default function ReportDisplay({
   report,
-  onReset,
+  //onReset,
   onUpdate,
 }: ReportDisplayProps) {
   const [isCopied, setIsCopied] = useState(false);
