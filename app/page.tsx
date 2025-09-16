@@ -78,9 +78,9 @@ export default function Home() {
       if (!accumulatedReport) {
         setError("No report content received");
       }
-    } catch (error: any) {
-      console.error("Error generating report:", error);
-      setError(error.message || "Error generating report. Please try again.");
+    } catch (error: unknown) {
+      console.error('Error generating report:', error)
+      setError(error instanceof Error ? error.message : 'Error generating report. Please try again.')
       setReport("");
     } finally {
       setIsLoading(false);
